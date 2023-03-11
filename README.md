@@ -7,11 +7,17 @@ First, create the build:
 `npm install`
 `npm run build`
 
+Test the build locally:
+
+`npm run dev`
+
+Visit http://localhost:5173 and see that an image loads correctly. This is not a page, but rather an image with some text on it. As you can see, it works fine.
+
 Then,
 
 Simulate "production" environment:
 
-`docker build -t test -f Dockerfile && docker run -p 80:80 test`
+`docker build -t test . && docker run -p 80:80 test`
 
 The build will fail with the following error:
 
